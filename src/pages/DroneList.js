@@ -1,9 +1,11 @@
 import React from 'react'
-
-export const DroneList = () => {
+import { DroneCard, PageHero } from '../components'
+const DroneList = () => {
     return (
-        <div>
-            hello from drone list
+        <div className='page-100'>
+            <PageHero title='List' />
+            <DroneCard />
         </div>
     )
 }
+export default DroneList

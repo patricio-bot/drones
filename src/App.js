@@ -1,11 +1,17 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-
+import { DroneList, DroneReports } from './pages'
+import { Footer } from './components'
 function App() {
   return (
-    <>
-      <h1>Drones</h1>
-      <button className='btn'>See Report</button>
-    </>
+    <Router>
+      <Switch>
+        <Route exact path='/'>
+          <DroneList />
+        </Route>
+        <Route exact path='/:id' children={<DroneReports />} />
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
 

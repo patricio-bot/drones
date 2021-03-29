@@ -1,9 +1,10 @@
 import React from 'react'
-
+import { PageHero } from '../components'
 const DroneReports = () => {
     return (
-        <div>
-            hello form drone reports
+        <div className='page-100'>
+            <PageHero title='Report' />
+            hello from drone reports
         </div>
     )
 }
