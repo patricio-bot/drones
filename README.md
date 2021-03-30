@@ -17,3 +17,6 @@ Install dependencies : `yarn install`
 
 Run : `yarn start`
 
+## Deploy
+
+[drones](https://dronesover.netlify.app/)
