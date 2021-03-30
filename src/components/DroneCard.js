@@ -1,61 +1,61 @@
 import React from 'react'
-import dronesList from '../utils/drones.json'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const DroneCard = () => {
+const DroneCard = ({ name, batery, age, image, id }) => {
 
     return (
-        <Wrapper className='section-center'>
-            {dronesList.drones.map((drone) => {
-                const { name, batery, age, image, id } = drone
-                return (
-                    <div className='card-container' key={id} >
-                        <img src={image} alt={name} />
-                        <div className="drone-info">
-                            <p>name: <span className='name'>{name}</span> </p>
-                            <p>battery: <span className='details'>{batery} mA</span> </p>
-                            <p>age: <span className='details'>{age} {age > 1 ? <span>Years</span> : <span>Year</span>}</span> </p>
-                        </div>
-                        <Link to={`/${id}`} className='btn'>See Reports</Link>
+        <Wrapper>
+            <div className='card-container'  >
+                <img src={image} alt={name} />
+                <div className="drone-info">
+                    <div className='align'> <p>name:</p> <span className='name'>{name}</span></div>
+                    <div className="align">
+                        <p>battery:  </p><span className='details'>{batery} mA</span>
                     </div>
-                )
-            })}
+                    <div className="align">
+                        <p>age:  </p><span className='details'>{age} {age > 1 ? <span>Years</span> : <span>Year</span>}</span>
+                    </div>
+                    <Link to={`/${id}`} className='btn'>See Reports</Link>
+                </div>
+
+            </div>
         </Wrapper>
     )
 }
-const Wrapper = styled.section`
-display:grid;
-gap:3rem;
-font-family: 'Poppins', sans-serif;
-padding:4rem 0;
+const Wrapper = styled.div`
 
-.card-container{
-    background-color:var(--clr-white);
+font-family: 'Poppins', sans-serif;
+background-color:var(--clr-white);
 border-radius:var(--big-radius);
 height:auto;
 padding-bottom:2rem ;
 display:flex;
 flex-direction:column;
 align-items:center;
-box-shadow:var(--card-shadow)
-}
-img {
+text-align:center;
+box-shadow:var(--card-shadow);
+
+img{
     width: 100%;
     display: block;
-    border-top-left-radius:inherit ;
-    border-top-right-radius:inherit ;
+    border-top-left-radius:var(--big-radius) ;
+    border-top-right-radius:var(--big-radius) ;
     object-fit:cover;
   }
   p{
       color:var(--clr-grey-04);
       font-weight:600;
       text-transform:uppercase;
-    display:grid;
-    grid-template-columns:repeat(2,1fr);
-    gap:4rem;
-
   }
+  .align{
+    width:80%;
+    margin:0 auto;
+    padding:0 1rem;
+    display:flex;
+    justify-content:space-between;
+  }
+
 .name{
     color:var(--clr-primary);
     text-transform:uppercase;
@@ -63,19 +63,17 @@ img {
 }
 .drone-info{
     padding:1rem 0;
-
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 }
 .details{
     color:black;
 }
-.details:nth-of-type(1) {
-    text-transform:none;
+span{
+    font-size:1.2rem;
 }
-@media (min-width:600px){
-    grid-template-columns: repeat(2, 1fr);
-}
-@media (min-width:900px){
-    grid-template-columns: repeat(4, 1fr);
-}
+
 `
 export default DroneCard

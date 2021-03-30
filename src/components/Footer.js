@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import logoDrone from '../assets/ddd-pink.svg'
 import { FaInstagram, FaTwitter, FaFacebookF } from 'react-icons/fa'
 
 const Footer = () => {
@@ -7,7 +8,11 @@ const Footer = () => {
         <Wrapper>
             <div className="section-top">
                 <div className="logo">
-                    <h1>hello from footer</h1>
+                    <div>
+                        <img src={logoDrone} alt="" />
+                        <h4>drones</h4>
+                    </div>
+
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste est laboriosam inventore enim!</p>
                 </div>
 
@@ -42,7 +47,7 @@ const Footer = () => {
 
             <div className="copyright-container">
 
-                <h5>Copyright &copy; {new Date().getFullYear()}. <span>Logoipsum.</span>
+                <h5>Copyright &copy; {new Date().getFullYear()}. <span>Drones.</span>
                 </h5>
                 <h5>All rights reserved.</h5>
 
@@ -58,7 +63,6 @@ flex-wrap:nowrap;
 flex-direction:column;
 font-family: 'DM Sans', sans-serif;
 background:var(--clr-white);
-height:30rem;
 color:var(--clr-grey-01);
 .section-top{
     width:100%;
@@ -66,7 +70,24 @@ color:var(--clr-grey-01);
     flex-wrap:wrap;
     justify-content:center;
     align-items:stretch;
+padding:0 1rem;
+}
+.logo{
+   display:grid;
+   grid-template-columns:1fr 1fr;
 
+    img{
+        height:3rem;
+    }
+  div{
+        display:grid;
+        grid-template-columns:auto 1fr;
+        grid-gap:1rem;
+        justify-self:center;
+        h4{
+            justify-self:center;
+        }
+    } 
 }
 .logo,.info-container{
     width:100%;
@@ -125,6 +146,14 @@ span{
         border-left:1px solid var(--clr-grey-06);
         border-top:initial;
     }
+}
+@media (min-width:900px){
+    .logo{
+        img{
+        height:4rem;
+    }
+    }
+   
 }
 `
 export default Footer

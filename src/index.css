@@ -14,19 +14,20 @@ font-family: 'Poppins', sans-serif; */
   --clr-background: #f6f9fc;
   --clr-white: #fff;
   --clr-primary: #6308f7;
-  --clr-primary-lightest: #3e66fb;
+  --clr-primary-lightest: #3e67fb31;
   --clr-pink: #ffd2dd;
   --clr-grey-01: #1e2833;
   --clr-grey-02: #2b3a4a;
-  --clr-grey-03: #3c4248;
+  --clr-grey-03: #87929e;
   --clr-grey-04: #6e7191;
   --clr-grey-05: #1e28336c;
   --clr-grey-06: #1e28333a;
   --clr-success: #3cc13b;
+  --clr-success-light: rgba(59, 193, 59, 0.363);
   --clr-warning: #f3bb1c;
-  --clr-warning-light: #f1d995;
+  --clr-warning-light: #f1d89577;
   --clr-error: #f03738;
-  --clr-error-light: #f16565;
+  --clr-error-light: rgba(240, 55, 55, 0.37);
 
   --dark-shadow: 0px 2px 4px rgba(0, 0, 0, 0.24);
   --soft-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -35,7 +36,7 @@ font-family: 'Poppins', sans-serif; */
   --mid-radius: 8px;
   --big-radius: 15px;
 
-  --btn-padding: 1rem 3rem;
+  --btn-padding: 0.8rem 3rem;
   --spacing: 0.1rem;
   --transition: all 0.3s linear;
   --max-width: 1200px;
@@ -96,13 +97,6 @@ p {
     line-height: 1;
   }
 }
-button {
-  border: none;
-  outline: none;
-}
-button:focus {
-  box-shadow: 1px 2px var(--clr-primary-lightest);
-}
 
 /******** utils ******/
 .wrapper {
@@ -113,9 +107,7 @@ button:focus {
 .main {
   flex-grow: 1;
 }
-/*  global classes */
 
-/* section */
 .section {
   padding: 5rem 0;
 }
@@ -125,19 +117,17 @@ button:focus {
   max-width: var(--max-width);
 }
 .page-100 {
-  min-height: calc(100vh - 36rem);
+  min-height: calc(100vh - 30rem);
 }
 .page {
-  min-height: calc(100vh - (10vh - 6rem));
+  min-height: calc(100vh - 30rem);
 }
 @media screen and (min-width: 992px) {
   .section-center {
     width: 95vw;
   }
 }
-.text-center {
-  text-align: center;
-}
+
 .btn {
   text-transform: capitalize;
   background: transparent;
@@ -146,6 +136,7 @@ button:focus {
   letter-spacing: var(--spacing);
   display: inline-block;
   font-weight: 600;
+  width: 80%;
   font-family: "Poppins", sans-serif;
   transition: var(--transition);
   font-size: 1.2rem;

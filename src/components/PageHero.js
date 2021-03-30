@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import logo from '../assets/ddd.jpg'
+import logoDrone from '../assets/ddd-pink.svg'
 const PageHero = ({ title }) => {
     return (
         <Wrapper>
             <h3>Drone {title}</h3>
             <Link to='/'>
-                <img src={logo} alt="drone" />
+                <img className='logo' src={logoDrone} alt="drone" />
             </Link>
 
         </Wrapper>
@@ -25,7 +25,7 @@ justify-content:space-between;
 align-items:center;
 img{
     display:block;
-    height:50px;
+    height:4rem;
 }
 `
 
