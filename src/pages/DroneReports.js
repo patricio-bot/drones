@@ -12,6 +12,7 @@ const DroneReports = () => {
     let getList = droneReports.reports.filter((obj) => obj.drone_id === Number(id))
     let header = Object.keys(getList[0]).slice(2)
     header[4] = 'traffic'
+    header[3] = 'longitude'
 
 
 
@@ -75,6 +76,7 @@ box-shadow:var(--dark-shadow);
 margin-bottom:4rem;
 font-family: 'Lato', sans-serif;
 overflow-x:auto;
+background:var(--clr-white);
 table {
   width: 100%;
   height: auto;
