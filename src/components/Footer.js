@@ -35,9 +35,10 @@ const Footer = () => {
                     <div className="social-media">
                         <h5>follow us</h5>
                         <div className='social-icons'>
-                            <FaFacebookF />
-                            <FaTwitter />
-                            <FaInstagram />
+                            <a href="https://es-es.facebook.com/" target="_blank" rel="noopener noreferrer">  <FaFacebookF /></a>
+                            <a href="https://twitter.com/?lang=es" target="_blank" rel="noopener noreferrer">  <FaTwitter /></a>
+
+                            <a href="https://www.instagram.com/?hl=es" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
                         </div>
                     </div>
 
