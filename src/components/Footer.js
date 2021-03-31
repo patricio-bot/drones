@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import logoDrone from '../assets/ddd-pink.svg'
 import { FaInstagram, FaTwitter, FaFacebookF } from 'react-icons/fa'
@@ -36,11 +35,9 @@ const Footer = () => {
                     <div className="social-media">
                         <h5>follow us</h5>
                         <div className='social-icons'>
-                            <a href="https://es-es.facebook.com/" target='_blank' rel="noreferrer"><FaFacebookF /></a>
-                            <a href="https://twitter.com/?lang=es" target='_blank' rel="noreferrer">
-                                <FaTwitter /></a>
-                            <a href="https://www.instagram.com/?hl=es" target='_blank' rel="noreferrer">
-                                <FaInstagram /></a>
+                            <FaFacebookF />
+                            <FaTwitter />
+                            <FaInstagram />
                         </div>
                     </div>
 
