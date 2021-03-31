@@ -20,3 +20,6 @@ export const classType = (traffic) => {
         return 'warning'
     }
 }
+export const top = () => {
+    window.scrollTo(0, 0)
+}

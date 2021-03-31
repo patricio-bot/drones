@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+import { top } from '../utils/helpers'
 
 const DroneCard = ({ name, batery, age, image, id }) => {
 
@@ -16,7 +17,7 @@ const DroneCard = ({ name, batery, age, image, id }) => {
                     <div className="align">
                         <p>age:  </p><span className='details'>{age} {age > 1 ? <span>Years</span> : <span>Year</span>}</span>
                     </div>
-                    <Link to={`/${id}`} className='btn'>See Reports</Link>
+                    <Link onClick={top} to={`/${id}`} className='btn'>See Reports</Link>
                 </div>
 
             </div>
